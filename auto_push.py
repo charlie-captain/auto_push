@@ -7,12 +7,15 @@ from watchdog.events import *
 import time
 import os
 
+#有可能分支名已经不叫master
+origin_name = "main"
+
 def push(change):
     print('-' * 76)
     os.system('git add .')
     os.system('git commit -m \" auto' + change + '\"')
-    os.system("git fetch origin master && git rebase origin/master")
-    os.system('git push origin master')
+    os.system("git fetch origin {0} && git rebase origin/{0}".format(origin_name))
+    os.system('git push origin {0}'.format(origin_name))
     print('-' * 76)
 
 
