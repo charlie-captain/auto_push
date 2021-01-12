@@ -5,7 +5,7 @@ BRANCH="main"
 start_moniting()
 {
     echo "start morniting folder......"
-    fswatch -0 -l 5 ./ -e "(/.git|^.)" | while read -d "" event; do sync_files $event ; done
+    fswatch -0 -l 5 ./ -e "(.git)" | while read -d "" event; do sync_files $event ; done
 }
 
 sync_files()
