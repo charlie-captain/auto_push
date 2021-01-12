@@ -10,8 +10,8 @@ start_moniting()
 
 sync_files()
 {
-    echo "start sync_files"
-   	git add . | git commit -m "auto commit : ${1}" | git fetch origin ${BRANCH}
+    echo "start sync_files ${1}"
+   	git add . | git commit -m "auto commit : "${1}"" | git fetch origin ${BRANCH}
 }
 
 doOnMac(){
