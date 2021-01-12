@@ -6,6 +6,7 @@
 copy到想要监听的目录, 运行脚本
 
 - python
+需要安装对应的python环境3.7+
 ```
 python3 auto_push.py
 ```
